@@ -1,0 +1,8 @@
+openai
+ib_insync
+pandas
+llama-index
+jinja2
+streamlit
+azure-functions
+langchain
