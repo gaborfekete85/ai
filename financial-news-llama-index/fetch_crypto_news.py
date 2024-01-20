@@ -6,7 +6,8 @@ from datetime import datetime, timedelta
 import random
 import string
 
-crypto_news_token = config.CRYPTO_NEWS_TOKEN
+# crypto_news_token = config.CRYPTO_NEWS_TOKEN
+crypto_news_token = os.environ['CRYPTO_NEWS_TOKEN']
 
 this_day_only = True
 lastCount = 10
@@ -50,7 +51,7 @@ while current_page < 1001:
             if not content: 
                 continue
 
-            current_file = f"{parsed_date.year}_{leadingZero(parsed_date.month)}_{leadingZero(parsed_date.day)}_{random_string(length=15)}.html"
+            current_file = f"{parsed_date.year}_{leadingZero(parsed_date.month)}_{leadingZero(parsed_date.day)}_{beauty.extractDomain(data[i]['news_url'])}_{random_string(length=15)}.html"
             print(f"File Name: {current_file}")
             article_filename = f"crypto_news/{current_file}"
 

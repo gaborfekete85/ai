@@ -4,7 +4,7 @@
 Financial News Analysis with Llama Index, GPT-4, and Streamlit
 
 # Step0 - Configuration
-In the config.py enter the following configuration keys
+Configure the following environment variables: 
  - OPENAI_API_KEY: API Key of Open AI
  - CRYPTO_NEWS_TOKEN: Authentication token to access crypto news API
 

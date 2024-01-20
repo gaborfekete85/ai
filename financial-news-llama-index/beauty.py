@@ -3,6 +3,7 @@
 from bs4 import BeautifulSoup
 import ssl
 from urllib.request import Request, urlopen
+from urllib.parse import urlsplit
 
 def getContent(urlLink):
     ctx = ssl.create_default_context()
@@ -21,5 +22,10 @@ def getContent(urlLink):
     except Exception as e:
         print(f"An error occurred - Unable to fetch URL: {urlLink}, {e}")
         return ""
+
+def extractDomain(url):
+    components = urlsplit(url)
+    domain = components.netloc.split(':')[0]
+    return domain
     
 print(getContent("https://www.forbes.com/sites/digital-assets/2024/01/12/100-billion-bitcoin-and-crypto-etf-price-crash-suddenly-accelerates-after-serious-fed-warning-hitting-ethereum-xrp-and-solana/"))

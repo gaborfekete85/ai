@@ -5,7 +5,7 @@ import os, config
 
 from llama_index import GPTVectorStoreIndex, SimpleDirectoryReader
 
-os.environ['OPENAI_API_KEY'] = config.OPENAI_API_KEY
+# os.environ['OPENAI_API_KEY'] = config.OPENAI_API_KEY
 
 documents = SimpleDirectoryReader('crypto_news').load_data()
 
