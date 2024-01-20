@@ -1,6 +1,6 @@
 import os, config
 from llama_index import GPTVectorStoreIndex, StorageContext, load_index_from_storage
-os.environ['OPENAI_API_KEY'] = config.OPENAI_API_KEY
+# os.environ['OPENAI_API_KEY'] = config.OPENAI_API_KEY
 
 import streamlit as st
 from llama_index import ServiceContext, LLMPredictor
@@ -18,15 +18,15 @@ storage_context = StorageContext.from_defaults(persist_dir="./storage")
 index = load_index_from_storage(storage_context)
 query_engine = index.as_query_engine()
 
-st.title('Fintama')
+st.title('AI')
 
 st.header("Financial Assistant")
 
 report_type = st.selectbox(
     'Select data source?',
-    ('ChatGPT', 'Fintama'))
+    ('ChatGPT', 'Crypto News'))
 
-if report_type == 'Fintama':
+if report_type == 'Crypto News':
     symbol = st.text_input("How can I help You ?")
 
     if symbol:

@@ -3,6 +3,16 @@
 
 Financial News Analysis with Llama Index, GPT-4, and Streamlit
 
+# Pre condition
+ - Python 3 installed
+
+# Setup
+Download dependencies: 
+ - Run in the command line
+```
+pip3 install -r requirements.txt
+```
+
 # Step0 - Configuration
 Configure the following environment variables: 
  - OPENAI_API_KEY: API Key of Open AI
